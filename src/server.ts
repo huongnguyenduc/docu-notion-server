@@ -24,7 +24,7 @@ const octokit = new Octokit({
 });
 
 const host = "localhost";
-const port = 8000;
+const port = 80;
 
 // Require an async function here to support await with the DB query
 const server = http.createServer(async (req, res) => {
@@ -82,8 +82,8 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-server.listen(port, host, () => {
-  console.log(`Server is running on http://${host}:${port}`);
+server.listen(port, () => {
+  console.log(`Server is running on ${port}`);
 });
 
 async function checkNotionUserAuth(email: string, notionDatabaseId: string) {
