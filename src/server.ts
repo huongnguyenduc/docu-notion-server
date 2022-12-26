@@ -24,7 +24,7 @@ const octokit = new Octokit({
 });
 
 const host = "localhost";
-const port = 80;
+const port = 8000;
 
 // Require an async function here to support await with the DB query
 const server = http.createServer(async (req, res) => {
