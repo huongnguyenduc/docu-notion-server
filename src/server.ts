@@ -82,7 +82,7 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-server.listen(port, host, () => {
+server.listen(port, () => {
   console.log(`Server is running on http://${host}:${port}`);
 });
 
