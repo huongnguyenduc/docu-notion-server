@@ -82,8 +82,8 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-server.listen(port, () => {
-  console.log(`Server is running on ${port}`);
+server.listen(port, host, () => {
+  console.log(`Server is running on http://${host}:${port}`);
 });
 
 async function checkNotionUserAuth(email: string, notionDatabaseId: string) {
