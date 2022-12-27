@@ -50,7 +50,7 @@ const server = http.createServer(async (req, res) => {
           const result = await octokit.request(
             "POST /repos/huongnguyenduc/docu-notion/actions/workflows/release.yml/dispatches",
             {
-              ref: "main",
+              ref: "master",
             }
           );
           if (result.status === 204) {
